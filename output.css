@@ -637,63 +637,26 @@ html {
   }
 }
 
-/* =========================
-   PROJECT / WORK SECTION
-========================= */
-
-.project-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  height: 420px;
-}
-
-.project-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* White info box */
-.project-info {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 16px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  z-index: 10;
-}
-
-/* Text */
-.project-info h3 {
-  color: #000;
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.project-info p {
-  color: #555;
-  font-size: 14px;
-  margin: 0;
-}
-
-/* Arrow button */
+/* Arrow always visible */
 .arrow-btn {
   width: 42px;
   height: 42px;
   border-radius: 50%;
   border: 2px solid #000;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: transparent;
+  opacity: 1;        /* IMPORTANT */
+  visibility: visible; /* IMPORTANT */
+
+  transition: all 0.3s ease;
 }
 
+/* Hover effect (optional) */
+.project-card:hover .arrow-btn {
+  background: #b6f56d;
+  transform: rotate(45deg);
+}
