@@ -695,3 +695,29 @@ html {
   align-items: center;
   justify-content: center;
 }
+/* SHOW MORE BUTTON FIX */
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 32px;
+  border-radius: 999px;
+
+  border: 1.5px solid rgba(255, 255, 255, 0.4); /* 👈 visible border */
+  color: #fff;
+  background: transparent;
+
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.show-more-btn:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
