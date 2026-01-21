@@ -636,69 +636,75 @@ html {
     grid-template-columns: 1fr;
   }
 }
-/* =========================
-   PROJECT / WORK SECTION
-========================= */
+/* ===============================
+   PROJECTS / MY LATEST WORK
+================================ */
 
-.project-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  height: 420px;
+/* Grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 60px;
 }
 
+/* Card */
+.project-card {
+  position: relative;
+  height: 420px;
+  border-radius: 26px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Project image */
 .project-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  border-radius: 26px;
+  transition: transform 0.6s ease;
 }
 
-/* White info box */
+/* Image zoom on hover */
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Bottom white info box */
 .project-info {
   position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 16px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+
+  background: #fff;
+  border-radius: 20px;
+  padding: 18px 20px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  z-index: 10;
 }
 
 /* Text */
 .project-info h3 {
-  color: #000;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
+  color: #000;
   margin: 0;
 }
 
 .project-info p {
-  color: #555;
   font-size: 14px;
-  margin: 0;
+  color: #555;
+  margin-top: 4px;
 }
 
-/* Arrow button */
+/* Arrow button (ALWAYS visible) */
 .arrow-btn {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 2px solid #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/* Arrow always visible */
-.arrow-btn {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 2px solid #000;
 
@@ -706,15 +712,35 @@ html {
   align-items: center;
   justify-content: center;
 
-  background: transparent;
-  opacity: 1;        /* IMPORTANT */
-  visibility: visible; /* IMPORTANT */
+  font-size: 18px;
+  color: #000;
 
   transition: all 0.3s ease;
 }
 
-/* Hover effect (optional) */
+/* Hover effect */
 .project-card:hover .arrow-btn {
   background: #b6f56d;
+  border-color: #b6f56d;
   transform: rotate(45deg);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    height: 360px;
+  }
 }
