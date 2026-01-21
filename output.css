@@ -556,4 +556,10 @@ video {
 
 html {
   scroll-behavior: smooth;
+}.project-card {
+  position: relative;
+  width: 280px;
+  height: 360px;
+  border-radius: 20px;
+  overflow: hidden;
 }
