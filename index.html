@@ -1,62 +1,37 @@
-<head> 
+<!-- HEADER START -->
+<header class="sticky top-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliana Portfolio - PrebuiltUI</title>
-<link rel="stylesheet" href="output.css">
-
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
-</head>
-
-<body class="font-Outfit leading-8 bg-black text-white overflow-x-hidden">
-
-    <div class="absolute top-0 right-0 w-11/12 -z-10 dark:hidden">
-  <img src="./assets/header-bg-color.png" alt="" class="w-full" />
-</div>
-
-        <img src="./assets/header-bg-color.png" alt="" class="w-full" />
+    <!-- Logo -->
+    <div class="text-2xl font-bold">
+      eliana<span class="text-purple-500">.</span>
     </div>
 
-    <nav id="navbar" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
-        <p class="bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-white/20 sr-only">
-            Hidden</p>
-        <a href="#!">
-            <img src="./assets/logo.png" alt="Logo" class="w-28 cursor-pointer mr-14 dark:hidden" />
-            <img src="./assets/logo_dark.png" alt="Logo" class="w-28 cursor-pointer mr-14 hidden dark:block" />
-        </a>
+    <!-- Nav links -->
+    <ul class="hidden md:flex items-center gap-8 text-sm text-white/80">
+      <li><a href="#top" class="hover:text-white transition">Home</a></li>
+      <li><a href="#about" class="hover:text-white transition">About me</a></li>
+      <li><a href="#services" class="hover:text-white transition">Services</a></li>
+      <li><a href="#work" class="hover:text-white transition">My Work</a></li>
+      <li><a href="#contact" class="hover:text-white transition">Contact me</a></li>
+    </ul>
 
-        <ul id="navLink"
-            class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo dark:border dark:border-white/30 dark:bg-transparent ">
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#top">Home</a></li>
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#about">About me</a></li>
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#services">Services</a></li>
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#work">My Work</a></li>
-            <li><a class='hover:text-gray-500 dark:hover:text-gray-300 transition' href="#contact">Contact me</a></li>
-        </ul>
+    <!-- Right buttons -->
+    <div class="flex items-center gap-4">
+      <!-- Theme icon (dummy) -->
+      <button class="hidden md:block opacity-70 hover:opacity-100 transition">
+        ☀️
+      </button>
 
-        <div class="flex items-center gap-4">
-            <button onclick="toggleTheme()">
-                <img src="./assets/moon_icon.png" alt="" class="w-5 dark:hidden" />
-                <img src="./assets/sun_icon.png" alt="" class="w-5 hidden dark:block" />
-            </button>
+      <!-- Contact button -->
+      <a href="#contact"
+        class="hidden md:flex items-center gap-2 px-5 py-2 border border-white/30 rounded-full text-sm hover:bg-white hover:text-black transition">
+        Contact ↗
+      </a>
 
-            <a href="#contact"
-                class="hidden lg:flex items-center gap-3 px-8 py-1.5 border border-gray-300 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full ml-4 font-Ovo dark:border-white/30">
-                Contact
-                <img src="./assets/arrow-icon.png" alt="" class="w-3 dark:hidden" />
-                <img src="./assets/arrow-icon-dark.png" alt="" class="w-3 hidden dark:block" />
-            </a>
-
-            <button class="block md:hidden ml-3" onclick="openMenu()">
-                <img src="./assets/menu-black.png" alt="" class="w-6 dark:hidden" />
-                <img src="./assets/menu-white.png" alt="" class="w-6 hidden dark:block" />
-            </button>
+  </div>
+</header>
+<!-- HEADER END -->
 
         </div>
         <!-- ----- mobile menu ------ -->
