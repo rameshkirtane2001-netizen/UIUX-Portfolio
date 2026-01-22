@@ -1,37 +1,57 @@
-<!-- HEADER START -->
-<header class="sticky top-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<!-- HEADER BG -->
+<div class="absolute top-0 right-0 w-11/12 -z-10 dark:hidden">
+  <img src="./assets/header-bg-color.png" alt="" class="w-full" />
+</div>
 
-    <!-- Logo -->
-    <div class="text-2xl font-bold">
-      eliana<span class="text-purple-500">.</span>
-    </div>
+<!-- HEADER -->
+<nav id="navbar"
+  class="w-full fixed top-0 left-0 px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
 
-    <!-- Nav links -->
-    <ul class="hidden md:flex items-center gap-8 text-sm text-white/80">
-      <li><a href="#top" class="hover:text-white transition">Home</a></li>
-      <li><a href="#about" class="hover:text-white transition">About me</a></li>
-      <li><a href="#services" class="hover:text-white transition">Services</a></li>
-      <li><a href="#work" class="hover:text-white transition">My Work</a></li>
-      <li><a href="#contact" class="hover:text-white transition">Contact me</a></li>
-    </ul>
+  <!-- glass effect -->
+  <div class="absolute inset-0 bg-white/50 backdrop-blur-lg shadow-sm dark:bg-black/50 -z-10"></div>
 
-    <!-- Right buttons -->
-    <div class="flex items-center gap-4">
-      <!-- Theme icon (dummy) -->
-      <button class="hidden md:block opacity-70 hover:opacity-100 transition">
-        ☀️
-      </button>
+  <!-- Logo -->
+  <a href="#top">
+    <img src="./assets/logo.png" alt="Logo" class="w-28 dark:hidden" />
+    <img src="./assets/logo_dark.png" alt="Logo" class="w-28 hidden dark:block" />
+  </a>
 
-      <!-- Contact button -->
-      <a href="#contact"
-        class="hidden md:flex items-center gap-2 px-5 py-2 border border-white/30 rounded-full text-sm hover:bg-white hover:text-black transition">
-        Contact ↗
-      </a>
+  <!-- Nav links -->
+  <ul
+    class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:bg-darkTheme dark:border dark:border-white/20">
+
+    <li><a href="#top" class="hover:text-gray-500 transition">Home</a></li>
+    <li><a href="#about" class="hover:text-gray-500 transition">About me</a></li>
+    <li><a href="#services" class="hover:text-gray-500 transition">Services</a></li>
+    <li><a href="#work" class="hover:text-gray-500 transition">My Work</a></li>
+    <li><a href="#contact" class="hover:text-gray-500 transition">Contact me</a></li>
+  </ul>
+
+  <!-- Right buttons -->
+  <div class="flex items-center gap-4">
+
+    <!-- Theme toggle -->
+    <button onclick="toggleTheme()">
+      <img src="./assets/moon_icon.png" class="w-5 dark:hidden" />
+      <img src="./assets/sun_icon.png" class="w-5 hidden dark:block" />
+    </button>
+
+    <!-- Contact button -->
+    <a href="#contact"
+      class="hidden lg:flex items-center gap-2 px-6 py-2 border border-gray-300 rounded-full hover:bg-gray-100 dark:border-white/30 dark:hover:bg-white/10">
+      Contact
+      <img src="./assets/arrow-icon.png" class="w-3 dark:hidden" />
+      <img src="./assets/arrow-icon-dark.png" class="w-3 hidden dark:block" />
+    </a>
+
+    <!-- Mobile menu -->
+    <button class="block md:hidden ml-3" onclick="openMenu()">
+      <img src="./assets/menu-black.png" class="w-6 dark:hidden" />
+      <img src="./assets/menu-white.png" class="w-6 hidden dark:block" />
+    </button>
 
   </div>
-</header>
-<!-- HEADER END -->
+</nav>
 
         </div>
         <!-- ----- mobile menu ------ -->
