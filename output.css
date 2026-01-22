@@ -758,3 +758,16 @@ html {
 .show-more-btn:hover span {
   transform: translateX(4px);
 }
+/* ===== HEADER FIX ===== */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* Navbar height = 96px */
+body {
+  padding-top: 96px;
+}
